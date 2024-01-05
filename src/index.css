@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* .navigation styles */
+.navigation li {
+  display: flex;
+  align-items: center;
+  color: #667081;
+  text-decoration: none;
+  padding: 0 0 0 10px;
+}
+
+.timeline-list:before {
+  background: #26c17e;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  width: 4px;
+  content: '';
+  margin-left: 18px;
+  z-index: -1;
+}
+
+.timeline-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.timeline-list li:last-child {
+  margin: 0;
+}
+.timeline-list .timeline-date {
+  padding: 15px;
+  background: #fff;
+  position: relative;
+  left: -15px;
+}
+.timeline-list .timeline-event {
+  position: relative;
+}
+.timeline-list .timeline-event:after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #eeeeee;
+}
